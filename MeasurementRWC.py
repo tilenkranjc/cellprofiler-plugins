@@ -1,24 +1,25 @@
-'''<b>Measure Correlation</b> measures the correlation between intensities in different images (e.g.,
+'''<b>Measure RWC</b> measures the Rank Weighted Correlation (RWC) between intensities in different images (e.g.,
 different color channels) on a pixel-by-pixel basis, within identified
 objects or across an entire image
 <hr>
 
-Given two or more images, this module calculates the correlation between the
-pixel intensities. The correlation can be measured for entire
-images, or a correlation measurement can be made within each
-individual object.
+Given two or more images, this module calculates the RWC between the
+pixel intensities. The RWC can be measured for entire
+images, or within each individual object.
+
+RWC was developed by Dr. Vasanth R. Singan. Please cite the following paper:
+Singan VR, Jones TR, Curran KM, Simpson JC. Dual channel rank-based intensity 
+weighting for quantitative co-localization of microscopy images. 
+BMC Bioinformatics. 2011;12:407.
 
 <h4>Available measurements</h4>
 <ul>
-<li><i>Correlation coefficient:</i> The correlation between a pair of images I and J. 
-Calculated as Pearson's correlation coefficient, for which the formula is
-covariance(I,J)/[std(I) * std(J)].
-<li><i>Slope:</i> The slope of the least-squares regression between a pair of images
-I and J. Calculated using the model <i>A</i>*I + <i>B</i> = J, where <i>A</i> is the slope.</li>
+<li><i>RWC I over J:</i> The RWC of image I over image J. </li>
+<li><i>RWC J over I:</i> The RWC of image J over image I. </li>
 </ul>
 
-Correlations will be calculated between all pairs of images that are selected in 
-the module, as well as between selected objects. For example, if correlations 
+RWCs will be calculated between all pairs of images that are selected in 
+the module, as well as between selected objects. For example, if RWCs 
 are to be measured for a set of red, green, and blue images containing identified nuclei, 
 measurements will be made between the following:
 <ul>
@@ -78,12 +79,12 @@ class MeasureRWC(cpm.CPModule):
         self.images_or_objects = cps.Choice('Select where to measure correlation',
                                             [M_IMAGES, M_OBJECTS, M_IMAGES_AND_OBJECTS], 
                                             doc = '''
-                                            Do you want to measure the correlation over the whole image, 
+                                            Do you want to measure the RWC over the whole image, 
                                             within objects, or both?
-                                            Both methods measure correlation on a pixel by pixel basis.
-                                            Selecting <i>Objects</i> will measure correlation only in those pixels previously
+                                            Both methods measure RWC on a pixel by pixel basis.
+                                            Selecting <i>Objects</i> will measure RWC only in those pixels previously
                                             identified as an object (you will be asked to specify which object).  Selecting 
-                                            <i>Images</i> will measure correlation across all pixels in the images.
+                                            <i>Images</i> will measure RWC across all pixels in the images.
                                             <i>Images and objects</i> will calculate both measurements.''')
         
         self.object_groups = []

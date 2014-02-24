@@ -1,13 +1,12 @@
-'''<b>MeasurementTAS</b> - an example measurement module
+'''<b>MeasurementTAS</b> - Measure Threshold adjacency statistics
 <hr>
-This is an example of a module that measures a property of an image both
-for the image as a whole and for every object in the image. It demonstrates
-how to load an image, how to load an object and how to record a measurement.
+This module measures the Threshold Adjacency Statistics of an image, object or both.
 
-The text you see here will be displayed as the help for your module. You
-can use HTML markup here and in the settings text; the Python HTML control
-does not fully support the HTML specification, so you may have to experiment
-to get it to display correctly.
+Please cite the following paper:
+Hamilton NA, Pantelic RS, Hanson K, Teasdale RD.: Fast automated cell phenotype image classification.
+BMC Bioinformatics 2007, 8:110.
+
+
 '''
 #################################
 #
