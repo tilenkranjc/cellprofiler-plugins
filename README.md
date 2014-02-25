@@ -13,4 +13,12 @@ MeasurementRWC.py
 Measure Rank Weighted Co-localisation coefficient, published by V. Singan.  
 Reference: http://www.biomedcentral.com/1471-2105/12/407/
 
+Installation
+------------
+1. Download the files from Github (check under releases tab)
+2. Find your plugins folder in CellProfiler preferences
+3. Extract the files and copy them to CellProfiler plugins folder
+4. Restart CellProfiler
+
 Created by @tilenkranjc
+
