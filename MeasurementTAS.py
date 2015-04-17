@@ -140,7 +140,7 @@ class MeasurementTAS(cpm.CPModule):
         # make in here
         #
         meas = workspace.measurements
-        assert isinstance(meas, cpmeas.Measurements)
+        #assert isinstance(meas, cpmeas.Measurements)
         #
         # We record some statistics which we will display later.
         # We format them so that Matplotlib can display them in a table.
@@ -169,7 +169,7 @@ class MeasurementTAS(cpm.CPModule):
         # completion for the image set.
         #
         image_set = workspace.image_set
-        assert isinstance(image_set, cpi.ImageSet)
+        #assert isinstance(image_set, cpi.ImageSet)
         #
         # Get the input image object. We want a grayscale image here.
         # The image set will convert a color image to a grayscale one
@@ -189,7 +189,7 @@ class MeasurementTAS(cpm.CPModule):
         # The object set has all of the objects in it.
         #
         object_set = workspace.object_set
-        assert isinstance(object_set, cpo.ObjectSet)
+        #assert isinstance(object_set, cpo.ObjectSet)
         #
         # Get objects from the object set. The most useful array in
         # the objects is "objects.segmented" which is a labels matrix
