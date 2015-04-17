@@ -5,7 +5,7 @@ Custom plugins for CellProfiler 2
 
 MeasurementTAS.py
 ----------------
-Measure Threshold Adjacency Statistics of image or objects. Works on 8bit images only.  
+Measure Threshold Adjacency Statistics of image or objects.   
 Reference: http://www.biomedcentral.com/1471-2105/8/110/
 
 MeasurementRWC.py
